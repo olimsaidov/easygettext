@@ -277,7 +277,7 @@ exports.Extractor = class Extractor {
         if (lang === 'js') {
           this.parseJavascript(filename, fileContent, jsParser);
         } else if (lang === 'ts') {
-          this.parseTypeScript(filename, fileContent);
+          this.parseTypeScript(filename, fileContent.replace(/\?\./g, '.'));
         }
       },
     );
